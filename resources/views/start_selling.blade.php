@@ -1,0 +1,481 @@
+@extends('layouts.app')
+
+@section('content')
+
+    <!-- Slider 1 Area Start Here -->
+    <div class="slider1-area overlay-default index1">
+        <div class="bend niceties preview-1">
+            <div id="ensign-nivoslider-3" class="slides">
+                <img src="asset/img/slider/1-1.jpg" alt="slider" title="#slider-direction-1"/>
+            </div>
+            <div id="slider-direction-1" class="t-cn slider-direction">
+                <div class="slider-content s-tb slide-1">
+                    <div class="title-container s-tb-c">
+                        <h2 class="title1" style="text-transform: capitalize; color: white"><bold>Work your way</bold></h2>
+                        <h4 class="title1" style="color: white">You bring the skill. We'll make earning easy.</h4>
+                        <button class="sidebar-search-btn default"><a href="/seller_onboarding" style="color: #ffffff; font-weight:100">Become a seller</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider 1 Area End Here -->
+    <!-- Service 1 Area Start Here -->
+    <div class="service1-area">
+        <div class="service1-inner-area">
+            <div class="container">
+                <div class="row service1-wrapper">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-box1">
+                        <div class="service-box-content">
+                            <h3 style="text-align: center; color:white">A Gig is Bought Every</h3>
+                            <h2 style="text-transform: uppercase; text-align: center; color:white"><b>5 sec</b></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-box1">
+                        <div class="service-box-content">
+                            <h3 style="text-align: center; color:white">Projects Completed</h3>
+                            <h2 style="text-transform: uppercase; text-align: center; color:white"><b>25m</b></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-box1">
+                        <div class="service-box-content">
+                            <h3 style="text-align: center; color:white">Price Range</h3>
+                            <h2 style="text-transform: uppercase; text-align: center; color:white"><b>$5 - $10</b></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service 1 Area End Here -->
+
+    <!-- Lecturers Area Start Here -->
+    <div class="lecturers-page1-area">
+        <div class="container">
+            <div class="row">
+                <br/>
+                <h2 style="text-align: center; "><b>Join Our Growing Freelance Community</b></h2>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item">
+                        <div class="lecturers1-item-wrapper">
+                            <div class="lecturers-img-wrapper">
+                                <a href="#"><img class="img-responsive" src="asset/img/team/1.jpg" alt="team"></a>
+                            </div>
+                            <div class="lecturers-content-wrapper">
+                                <h3 class="item-title"><a href="#">Rosy Janner</a></h3>
+                                <span class="item-designation">Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item">
+                        <div class="lecturers1-item-wrapper">
+                            <div class="lecturers-img-wrapper">
+                                <a href="#"><img class="img-responsive" src="asset/img/team/2.jpg" alt="team"></a>
+                            </div>
+                            <div class="lecturers-content-wrapper">
+                                <h3 class="item-title"><a href="#">Mike Hussy</a></h3>
+                                <span class="item-designation">Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item">
+                        <div class="lecturers1-item-wrapper">
+                            <div class="lecturers-img-wrapper">
+                                <a href="#"><img class="img-responsive" src="asset/img/team/3.jpg" alt="team"></a>
+                            </div>
+                            <div class="lecturers-content-wrapper">
+                                <h3 class="item-title"><a href="#">Daziy Millar</a></h3>
+                                <span class="item-designation">Writer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item">
+                        <div class="lecturers1-item-wrapper">
+                            <div class="lecturers-img-wrapper">
+                                <a href="#"><img class="img-responsive" src="asset/img/team/5.jpg" alt="team"></a>
+                            </div>
+                            <div class="lecturers-content-wrapper">
+                                <h3 class="item-title"><a href="#">David Lipu</a></h3>
+                                <span class="item-designation">Video Editor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item">
+                        <div class="lecturers1-item-wrapper">
+                            <div class="lecturers-img-wrapper">
+                                <a href="#"><img class="img-responsive" src="asset/img/team/6.jpg" alt="team"></a>
+                            </div>
+                            <div class="lecturers-content-wrapper">
+                                <h3 class="item-title"><a href="#">Luice Nishaa</a></h3>
+                                <span class="item-designation">Musician</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item">
+                        <div class="lecturers1-item-wrapper">
+                            <div class="lecturers-img-wrapper">
+                                <a href="#"><img class="img-responsive" src="asset/img/team/7.jpg" alt="team"></a>
+                            </div>
+                            <div class="lecturers-content-wrapper">
+                                <h3 class="item-title"><a href="#">Tom Steven</a></h3>
+                                <span class="item-designation">Voiceover Artist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item">
+                        <div class="lecturers1-item-wrapper">
+                            <div class="lecturers-img-wrapper">
+                                <a href="#"><img class="img-responsive" src="asset/img/team/8.jpg" alt="team"></a>
+                            </div>
+                            <div class="lecturers-content-wrapper">
+                                <h3 class="item-title"><a href="#">Jenifar Lopez</a></h3>
+                                <span class="item-designation">Web Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item" style="align-content: space-around">
+                        <div class="lecturers1-item-wrapper">
+                            <div class="lecturers-img-wrapper">
+                                <a href="#"><span class="glyphicon glyphicon-heart" style="font-size:60px"></span></a>
+                                <h3 style="text-align: center"><a href="#"><bold>What's <br> Your skill</bold></a></h3>
+                                <button class="sidebar-search-btn default"><a href="/seller_onboarding" style="color: #ffffff; font-weight:100">Become a seller</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Lecturers Area End Here -->
+
+
+    <!-- Inner Page Banner Area Start Here -->
+    <!-- Inner Page Banner Area End Here -->
+    <!-- About 1 Area Start Here -->
+    <div class="about1-area">
+        <div class="container">
+            <h2><b>How It Works</b></h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="service-box3">
+                        <div class="service-box-icon">
+                            <i class="fa fa-vcard-o" style="font-size:60px"></i>
+                        </div>
+                        <h3>1. Create A Gig</h3>
+                        <p>Sign up for free, set up your Gig and offer your work to our global audience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="service-box3">
+                        <div class="service-box-icon">
+                            <span class="glyphicon glyphicon-check" style="font-size:60px"></span>
+                        </div>
+                        <h3>2. Deliver Great Work</h3>
+                        <p>Get notified when you get an order and use our system to discuss details with customers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="service-box3">
+                        <div class="service-box-icon">
+                            <i class="material-icons" style="font-size:60px">assignment_turned_in</i>
+                        </div>
+                        <h3>3. Get Paid</h3>
+                        <p>Get paid on time, every time. Payment is transferred to you upon order completion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Students Say Area Start Here -->
+    <div class="students-say-area">
+        <h2 class="title-default-center"><b>Buyer's Say</b></h2>
+        <div class="container">
+            <div class="rc-carousel"
+                 data-loop="true"
+                 data-items="2"
+                 data-margin="30"
+                 data-autoplay="false"
+                 data-autoplay-timeout="10000"
+                 data-smart-speed="2000"
+                 data-dots="true"
+                 data-nav="false"
+                 data-nav-speed="false"
+                 data-r-x-small="1"
+                 data-r-x-small-nav="false"
+                 data-r-x-small-dots="true"
+                 data-r-x-medium="2"
+                 data-r-x-medium-nav="false"
+                 data-r-x-medium-dots="true"
+                 data-r-small="2"
+                 data-r-small-nav="false"
+                 data-r-small-dots="true"
+                 data-r-medium="2"
+                 data-r-medium-nav="false"
+                 data-r-medium-dots="true"
+                 data-r-large="2"
+                 data-r-large-nav="false"
+                 data-r-large-dots="true">
+                <div class="single-item">
+                    <div class="single-item-wrapper">
+                        <div class="profile-img-wrapper">
+                            <a href="#" class="profile-img"><img class="profile-img-responsive img-circle" src="asset/img/students/1.jpg" alt="Testimonial"></a>
+                        </div>
+                        <div class="tlp-tm-content-wrapper">
+                            <h3 class="item-title"><a href="#">Rosy Janner</a></h3>
+                            <span class="item-designation">UI Designer</span>
+                            <ul class="rating-wrapper">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            </ul>
+                            <div class="item-content">Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-item">
+                    <div class="single-item-wrapper">
+                        <div class="profile-img-wrapper">
+                            <a href="#" class="profile-img"><img class="profile-img-responsive img-circle" src="asset/img/students/2.jpg" alt="Testimonial"></a>
+                        </div>
+                        <div class="tlp-tm-content-wrapper">
+                            <h3 class="item-title"><a href="#">Dainel Dina</a></h3>
+                            <span class="item-designation">Manager</span>
+                            <ul class="rating-wrapper">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            </ul>
+                            <div class="item-content">Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-item">
+                    <div class="single-item-wrapper">
+                        <div class="profile-img-wrapper">
+                            <a href="#" class="profile-img"><img class="profile-img-responsive img-circle" src="asset/img/students/1.jpg" alt="Testimonial"></a>
+                        </div>
+                        <div class="tlp-tm-content-wrapper">
+                            <h3 class="item-title"><a href="#">Rosy Janner</a></h3>
+                            <span class="item-designation">UI Designer</span>
+                            <ul class="rating-wrapper">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            </ul>
+                            <div class="item-content">Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-item">
+                    <div class="single-item-wrapper">
+                        <div class="profile-img-wrapper">
+                            <a href="#" class="profile-img"><img class="profile-img-responsive img-circle" src="asset/img/students/2.jpg" alt="Testimonial"></a>
+                        </div>
+                        <div class="tlp-tm-content-wrapper">
+                            <h3 class="item-title"><a href="#">Dainel Dina</a></h3>
+                            <span class="item-designation">Manager</span>
+                            <ul class="rating-wrapper">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            </ul>
+                            <div class="item-content">Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-item">
+                    <div class="single-item-wrapper">
+                        <div class="profile-img-wrapper">
+                            <a href="#" class="profile-img"><img class="profile-img-responsive img-circle" src="asset/img/students/1.jpg" alt="Testimonial"></a>
+                        </div>
+                        <div class="tlp-tm-content-wrapper">
+                            <h3 class="item-title"><a href="#">Rosy Janner</a></h3>
+                            <span class="item-designation">UI Designer</span>
+                            <ul class="rating-wrapper">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            </ul>
+                            <div class="item-content">Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-item">
+                    <div class="single-item-wrapper">
+                        <div class="profile-img-wrapper">
+                            <a href="#" class="profile-img"><img class="profile-img-responsive img-circle" src="asset/img/students/2.jpg" alt="Testimonial"></a>
+                        </div>
+                        <div class="tlp-tm-content-wrapper">
+                            <h3 class="item-title"><a href="#">Dainel Dina</a></h3>
+                            <span class="item-designation">Manager</span>
+                            <ul class="rating-wrapper">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            </ul>
+                            <div class="item-content">Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Students Say Area End Here -->
+
+    <!-- Faq Page Area Start Here -->
+    <div class="faq-page-area">
+        <div class="container">
+            <h2 style="text-align: center"><b>Q&amp;A</b></h2>
+            <div class="row panel-group" id="faq-accordian">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="faq-box-wrapper">
+                        <div class="faq-box-item panel panel-default">
+                            <div class="panel-heading active">
+                                <div class="panel-title faq-box-title">
+                                    <h3>
+                                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="faq-box-count">1</span>Plummy text  printing and typesetting iyourndustry.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div aria-expanded="false" id="collapseOne" role="tabpanel" class="panel-collapse collapse in">
+                                <div class="panel-body faq-box-body">
+                                    <p>Dorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesthe leap into electronic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-box-wrapper">
+                        <div class="faq-box-item panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title faq-box-title">
+                                    <h3>
+                                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="faq-box-count">2</span>Plummy text  printing and typesetting iyourndustry.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div aria-expanded="false" id="collapseTwo" role="tabpanel" class="panel-collapse collapse">
+                                <div class="panel-body faq-box-body">
+                                    <p>Dorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesthe leap into electronic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-box-wrapper">
+                        <div class="faq-box-item panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title faq-box-title">
+                                    <h3>
+                                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="faq-box-count">3</span>Plummy text  printing and typesetting iyourndustry.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div aria-expanded="false" id="collapseThree" role="tabpanel" class="panel-collapse collapse">
+                                <div class="panel-body faq-box-body">
+                                    <p>Dorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesthe leap into electronic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="faq-box-wrapper">
+                        <div class="faq-box-item panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title faq-box-title">
+                                    <h3>
+                                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="faq-box-count">4</span>Plummy text  printing and typesetting iyourndustry.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div aria-expanded="false" id="collapseFour" role="tabpanel" class="panel-collapse collapse">
+                                <div class="panel-body faq-box-body">
+                                    <p>Dorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesthe leap into electronic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-box-wrapper">
+                        <div class="faq-box-item panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title faq-box-title">
+                                    <h3>
+                                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="faq-box-count">5</span>Plummy text  printing and typesetting iyourndustry.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div aria-expanded="false" id="collapseFive" role="tabpanel" class="panel-collapse collapse">
+                                <div class="panel-body faq-box-body">
+                                    <p>Dorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesthe leap into electronic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-box-wrapper">
+                        <div class="faq-box-item panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title faq-box-title">
+                                    <h3>
+                                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><span class="faq-box-count">6</span>Plummy text  printing and typesetting iyourndustry.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div aria-expanded="false" id="collapseSix" role="tabpanel" class="panel-collapse collapse">
+                                <div class="panel-body faq-box-body">
+                                    <p>Dorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesthe leap into electronic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Faq Page Area End Here -->
+
+    <div class="error-bottom">
+    </div>
+<div class="error-page-area">
+    <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="error-bottom">
+                    <h4 style="text-align: center">Sign up and create your first Gig today</h4>
+                    <a href="/seller_onboarding" class="default-white-btn">Get Started</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+@endsection

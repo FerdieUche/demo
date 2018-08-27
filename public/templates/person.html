@@ -1,0 +1,109 @@
+<div ng-controller="PersonController">
+    <h2>Personal Info</h2>
+    <p>Tell us a bit about yourself. This information will appear on your public</p>
+    <p>profile, so that potential buyers can get to know you better.</p>
+    <p style="text-align: right"><i>*Mandatory fields</i></p>
+    <hr/>
+    <div class="form-group">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <label class="control-label" for="full_name">Full Name*</label>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <input type="text" class="form-control" name="firstname" id="firstname">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <input type="text" class="form-control" name="surname" id="surname">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="form-group">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <label class="control-label" for="avatar">Profile Picture*</label>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <input type="file" name="avatar" id="avatar">
+            <img src="" id="profile-img-tag" width="150px" style="border-radius: 50%;"/>
+
+            <script type="text/javascript">
+                function readURL(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            $('#profile-img-tag').attr('src', e.target.result);
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+                $("#avatar").change(function(){
+                    readURL(this);
+                });
+            </script>
+
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="form-group">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <label class="control-label" for="phone">
+                <b>Phone Number*</b>
+                <code><i>Private</i></code>
+            </label>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <input type="text" class="form-control" name="phone" value="" id="phone">
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="form-group">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <label class="control-label" for="description">Description*</label>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <textarea class="form-control" rows="4" name="description" placeholder="What do buyers need to know about you?"></textarea>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="form-group">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <label class="control-label" for="lang">Language*</label>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <input type="text" class="form-control" name="lang" placeholder="Language" id="lang">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <select class="form-control" name="proficiency" id="proficiency">
+                        <option>Unspecific</option>
+                        <option>Basic</option>
+                        <option>Conversational</option>
+                        <option>Fluent</option>
+                        <option>Native/Bilingual</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/><br/><br/><br/>
+
+    <div class="form-group" style="text-align: right">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-default"><a ui-sref='account()'>Continue</a></button>
+        </div>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
