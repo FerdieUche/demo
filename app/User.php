@@ -36,4 +36,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profession::class, 'user_id');
     }
+    public function Gigs()
+    {
+        return $this->hasOne(Gigs::class, 'user_id');
+    }
 }

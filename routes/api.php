@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\category;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,19 +20,28 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/test', 'HomeController@test')->name('test');
 
+//Route::get('dropdown', 'CategoryController@update')->name('dropdown');
 
+//AuthController.....
 Route::post('register', 'AuthController@store')->name('register');
 Route::post('signin', 'AuthController@checkAuth')->name('signin');
+
+//PersonController...
 Route::get('Person/{id?}', 'PersonController@index')->name('Person/{id?}');
-Route::post('person', 'PersonController@store')->name('person');
 Route::post('data', 'PersonController@update')->name('data');
 Route::delete('Person/{id?}', 'PersonController@destroy')->name('Person/{id?}');
-Route::get('Profession/{id?}', 'ProfessionController@index')->name('index');
+
+//GigsController...
+Route::post('update', 'GigsController@update')->name('update');
+
+//ProfessionController...
+Route::get('Profession/{id?}', 'ProfessionController@index')->name('Profession/{id?}');
 Route::post('profession', 'ProfessionController@store')->name('profession');
 Route::post('info', 'ProfessionController@update')->name('info');
-Route::delete('Profession/{id?}', 'ProfessionController@destroy')->name('destroy');
-Route::post('upload', 'FilesController@update')->name('upload');
+Route::delete('Profession/{id?}', 'ProfessionController@destroy')->name('Profession/{id?}');
 
-Route::get('/file/list', 'FilesController@listFiles');
+//Route::post('upload', 'FilesController@update')->name('upload');
 
-Route::post("/delete/file");
+//Route::get('/file/list', 'FilesController@listFiles');
+
+//Route::post("/delete/file");

@@ -15,19 +15,14 @@ Route::get('/', function () {
     return view('app');
 });
 
-//
-//Route::get('/start_selling', function () {
-//    return view('start_selling');
-//});
-//
-//Route::get('/seller_onboarding', function () {
-//    return view('seller_onboarding');
-//});
+Route::get('Gigs', 'GigsController@index')->name('Gigs');
 
-//Route::post("store/file", "FilesController@store");
+Route::get('Gig/{id}', 'GigsController@show');
 
+Route::get('person', 'PersonController@index')->name('person');
+
+Route::get('person/{id}', 'PersonController@show');
 
 Auth::routes();
 
-//Route::get('/', 'HomeController@index')->name('home');
 

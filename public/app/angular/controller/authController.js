@@ -5,9 +5,6 @@ app.controller('loginController', function($scope,$rootScope,$state, $http, logi
     $scope.loginData = {};
     $scope.name = "User";
 
-    console.log($cookieStore.get("user_auth"));
-
-
     $scope.signIn = function () {
         loginFactory.login($scope.loginData)
             .success(function (response) {
@@ -58,7 +55,6 @@ app.controller('loginController', function($scope,$rootScope,$state, $http, logi
     };
 });
 
-
 app.controller('registerController', function($scope, $http, registerFactory, $location, $cookieStore) {
 
     $scope.registerData = {};
@@ -95,7 +91,6 @@ app.controller('registerController', function($scope, $http, registerFactory, $l
     };
 
 });
-
 
 app.controller('MainCtrl', function ($scope) {
     $scope.showModal = false;
@@ -144,22 +139,4 @@ app.directive('modal', function () {
             });
         }
     };
-});
-
-app.controller('CarouselDemoCtrl', function ($scope){
-    $scope.myInterval = 3000;
-    $scope.slides = [
-        {
-            src: 'asset/img/banner/pro-2.jpg'
-        },
-        {
-            src: 'asset/img/banner/pro-1.jpg'
-        },
-        {
-            src: 'asset/img/banner/pro-2.jpg'
-        },
-        {
-            src: 'asset/img/banner/pro-1.jpg'
-        }
-    ];
 });

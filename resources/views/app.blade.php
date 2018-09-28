@@ -20,6 +20,8 @@
 
     <link rel="stylesheet" href="asset/css/select2.min.css">
 
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="asset/css/normalize.css">
 
@@ -83,13 +85,7 @@
     <script src="<?= asset('app/angular/angular-cookies.js') ?>"></script>
 
     <!-- Image Upload Script-->
-    <script>
-        $.ajaxSetup({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-    </script>
+
     <!-- AngularJS Application Scripts Ends-->
 
 

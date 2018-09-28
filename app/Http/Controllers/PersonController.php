@@ -29,19 +29,19 @@ class PersonController extends Controller
         ]);
     }
 
-    //return all or a particular data from the database
-    public function index($id = null) {
-        if ($id == null) {
-            return Person::orderBy('id', 'asc')->get();
-        } else {
-            return $this->show($id);
-        }
+    //return all persons data from the database
+    public function index() {
+        return Person::all();
     }
 
     //find a particular employee by id
-    public function show($id) {
-        return Person::find($id);
-    }
+    public function show(Request $request, $id) {
+        $person = Person::find($id);
+        if(!$person) {
+            return response('Error in the log ' . $id, 403);
+        }
+        return response($person, 201);    }
+
 
     //Update the record in the database
     public function update() {
@@ -49,11 +49,19 @@ class PersonController extends Controller
             'firstname' => request('firstname'),
             'surname' => request('surname'),
             'description' => request('description'),
+            'country' => request('country'),
+            'category' => request('category'),
             'lang' => request('lang'),
             'proficiency' => request('proficiency'),
             'phone' => request('phone'),
             'user_id' => request('id'),
         ]);
+
+        if(!($person)){
+                    return response('Error in the log', 403);
+                }
+        return response(($person),201);
+
     }
 
 

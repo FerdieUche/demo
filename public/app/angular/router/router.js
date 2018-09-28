@@ -68,6 +68,30 @@ app.config(['$stateProvider', '$urlRouterProvider' ,function($stateProvider, $ur
             },
             authenticate: true
         })
+        .state('manage_gig',
+        {
+            parent:'home',
+            url: '/manage_gig',
+            views: {
+                'home_content@home': {
+                    templateUrl: 'partials/pages/manage_gig.html'
+                }
+            },
+            authenticate: true
+        })
+
+        .state('gig',
+        {
+            parent:'home',
+            url: '/gig/:id',
+            views: {
+                'home_content@home': {
+                    templateUrl: 'partials/pages/gig-details.html'
+                }
+            },
+            authenticate: false
+        })
+
 
         .state('pro_home',
         {
@@ -94,7 +118,5 @@ app.config(['$stateProvider', '$urlRouterProvider' ,function($stateProvider, $ur
         });
 
     $urlRouterProvider.otherwise('/index');
-
-
 
 }]);

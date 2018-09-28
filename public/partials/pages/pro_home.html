@@ -8,178 +8,27 @@
     </div>
 </div>
 <!-- Inner Page Banner Area End Here -->
-<div class="footer-area-top" style="background-color: white;">
-    <div class="container">
-        <h2 style="color:black; font-weight: 900; text-align: left"><b>Pro Logo Design Services</b></h2>
-        <div class="row">
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <a ui-sref="start_selling"><img src="asset/img/card/card-3.png"></a>
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
+<div ng-controller="GigsController">
+    <div class="footer-area-top" style="background-color: white;">
+        <div class="container">
+            <h2 style="color:black; font-weight: 900; text-align: left"><b>Professional Services We Offer</b></h2>
+            <div class="row">
+                <div ng-repeat="gig in gigs">
+                    <div class="col-xs-18 col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <a href="#/gig/[[gig.id]]"><img src="asset/img/card/card-3.png"></a>
+                            <div class="caption">
+                                <p style="color: black">[[gig.basic_package_name]]</p>
+                                <p style="color: black">[[ gig.gig_title ]]</p>
+                                <hr/>
+                                <a href="#/gig/[[gig.id]]" class="btn btn-default btn-xs pull-right" role="button">Starting At [[ gig.basic_price ]]</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/row-->
 
-        <br/><br/>
-        <h2 style="color:black; font-weight: 900; text-align: left"><b>Pro Articles & Blog Post Services</b></h2>
-        <div class="row">
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-18 col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="asset/img/card/card-3.png">
-                    <div class="caption">
-                        <p style="color: black">lara1544</p>
-                        <p style="color: black">I will create your logo and brand your design.</p>
-                        <hr/>
-                        <a href="#" class="btn btn-default btn-xs pull-right" role="button">Starting At $100</a><a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-heart"></i></a> <a href="#" class="btn btn-default btn-xs" role="button"><i class="glyphicon glyphicon-th-list"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/row-->
-    </div>
-    <!--/container -->
     <br/><br/>
 
     <div class="container">

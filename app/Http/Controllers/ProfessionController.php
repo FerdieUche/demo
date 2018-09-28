@@ -76,6 +76,12 @@ class ProfessionController extends Controller
             'web' => request('web'),
             'user_id' => request('id'),
         ]);
+
+        if(!($profession)){
+            return response('Error in the log', 403);
+        }
+        return response(($profession),201);
+
     }
 
     //public function to delete

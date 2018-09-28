@@ -35,7 +35,6 @@ app.factory('loginFactory',['$http', 'API_URL', function($http, API_URL) {
 
 }]);
 
-
 app.factory('registerFactory',['$http', 'API_URL', function($http, API_URL) {
 
     return {
@@ -62,19 +61,41 @@ app.factory('registerFactory',['$http', 'API_URL', function($http, API_URL) {
     }
 }]);
 
-app.factory('AuthService',['$cookieStore', function($cookieStore) {
+app.factory('gigFactory',['$http', function($http) {
+
     return {
-        isAuth: function () {
-            if ($cookieStore.get("user_auth")) {
-                return true;
-            }
-            else {
-                return false;
-            }
+        //Retrieve a particular Gig
+        list: function (id) {
+            var gigs =$http.get('/Gig/' + id)
+                .success(function(response){
+                    console.log(response);
+                })
+                .error(function(data){
+                    console.log(data);
+                });
+            return gigs;
         }
-    }
+    };
+
 }]);
 
+app.factory('personFactory',['$http', function($http) {
+
+    return {
+        //Retrieve a particular person
+        info: function (id) {
+            var person =$http.get('/person/' + id)
+                .success(function(response){
+                    console.log(response);
+                })
+                .error(function(data){
+                    console.log(data);
+                });
+            return person;
+        }
+    };
+
+}]);
 
 app.run(function ($rootScope, $state, AuthService) {
     $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams){
@@ -88,3 +109,15 @@ app.run(function ($rootScope, $state, AuthService) {
     });
 });
 
+app.factory('AuthService',['$cookieStore', function($cookieStore) {
+    return {
+        isAuth: function () {
+            if ($cookieStore.get("user_auth")) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+}]);

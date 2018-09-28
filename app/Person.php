@@ -8,7 +8,7 @@ class Person extends Model
 {
     protected $table ='person';
 
-    protected $fillable = ['user_id', 'firstname', 'description','surname','avatar','lang','proficiency','phone' ];
+    protected $fillable = ['id', 'user_id', 'firstname', 'description','surname','avatar','lang','country','category','proficiency','phone' ];
 
     public function user()
     {
