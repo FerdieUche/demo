@@ -1,6 +1,8 @@
 /**
  * Created by MY PC on 8/7/2018.
  */
+
+
 app.controller('PeopleController', function($state, $scope, $http, API_URL, $cookieStore){
 
     $scope.personData = {};
@@ -25,7 +27,6 @@ app.controller('PeopleController', function($state, $scope, $http, API_URL, $coo
 
     //save new record / update existing record
     $scope.save = function() {
-        //console.log($scope.personData);
         $http({
             method: 'POST',
             url:  API_URL + 'data',
@@ -281,6 +282,11 @@ app.controller('GigController', function($scope, $http, gigFactory, $stateParams
             .error(function (response) {
                 console.log(response);
             });
+
+    $scope.gig_plan_id = 1;
+    $scope.customize = function(){
+        console.log($scope.gig_plan_id)
+    }
 });
 
 app.controller('PersonController', function($scope, $http, personFactory, $stateParams) {

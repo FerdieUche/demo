@@ -35,48 +35,48 @@
                         <!--<div class="sidebar">-->
                             <div class="sidebar-box" style="align-content: right">
                                 <div class="tab">
-                                    <button class="tablinks" onclick="openTab(event, 'premium')"><b>Premium</b></button>
-                                    <button class="tablinks" onclick="openTab(event, 'standard')"><b>Standard</b></button>
-                                    <button class="tablinks" onclick="openTab(event, 'basic')" id="defaultOpen"><b>Basic</b></button>
+                                    <button class="tablinks" onclick="openTab(event, 'premium')" ng-click="gig_plan_id = 3"><b>Premium</b></button>
+                                    <button class="tablinks" onclick="openTab(event, 'standard')" ng-click="gig_plan_id = 2"><b>Standard</b></button>
+                                    <button class="tablinks" onclick="openTab(event, 'basic')" id="defaultOpen" ng-click="gig_plan_id = 1"><b>Basic</b></button>
                                 </div>
 
                                 <div id="premium" class="tabcontent">
                                     <div class="sidebar-box-inner">
                                         <div class="sidebar-course-reviews">
-                                            <h4 class="sidebar-title">[[gigs.premium_package_name]]<span>[[gigs.premium_price]]</span></h4>
+                                            <h4 class="sidebar-title">[[gigs.premium_package_name]]<span style="display:inline-block; margin-left: 50px;">[[gigs.premium_price]]</span></h4>
                                             <br/>
                                             <p>[[gigs.premium_package_description]]</p>
                                             <br/>
                                             <p><i class="fa fa-clock-o" aria-hidden="true"></i> <b>[[gigs.premium_delivery_day]]</b></p>
                                         </div>
                                     </div>
-                                    <button type="submit" class="default-full-width-btn">Continue([[gigs.premium_price]])</button>
+                                    <button type="submit" class="default-full-width-btn" ng-click="customize()">Continue([[gigs.premium_price]])</button>
                                 </div>
 
                                 <div id="standard" class="tabcontent">
                                     <div class="sidebar-box-inner">
                                         <div class="sidebar-course-reviews">
-                                            <h4 class="sidebar-title">[[gigs.standard_package_name]]<span>[[gigs.standard_price]]</span> </h4>
+                                            <h4 class="sidebar-title">[[gigs.standard_package_name]]<span style="display:inline-block; margin-left: 50px;">[[gigs.standard_price]]</span> </h4>
                                             <br/>
                                             <p>[[gigs.standard_package_description]]</p>
                                             <br/>
                                             <p><i class="fa fa-clock-o" aria-hidden="true"></i> <b>[[gigs.standard_delivery_day]]</b></p>
                                         </div>
                                     </div>
-                                    <button type="submit" class="default-full-width-btn">Continue([[gigs.standard_price]])</button>
+                                    <button type="submit" class="default-full-width-btn" ng-click="customize()">Continue ([[gigs.standard_price]])</button>
                                 </div>
 
                                 <div id="basic" class="tabcontent">
                                     <div class="sidebar-box-inner">
                                         <div class="sidebar-course-reviews">
-                                            <h4 class="sidebar-title">[[gigs.basic_package_name]]<span style="align-content: right">[[gigs.basic_price]]</span> </h4>
+                                            <h4 class="sidebar-title">[[gigs.basic_package_name]]<span style="display:inline-block; margin-left: 50px;">[[gigs.basic_price]]</span> </h4>
                                             <br/>
                                             <p>[[gigs.basic_package_description]]</p>
                                             <br/>
                                             <p><i class="fa fa-clock-o" aria-hidden="true"></i> <b>[[gigs.basic_delivery_day]]</b></p>
                                         </div>
                                     </div>
-                                    <button type="submit" class="default-full-width-btn">Continue([[gigs.basic_price]])</button>
+                                    <button type="submit" class="default-full-width-btn" ng-click="customize()">Continue([[gigs.basic_price]])</button>
                                 </div>
                                 <hr/>
                             </div>

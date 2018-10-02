@@ -92,6 +92,17 @@ app.config(['$stateProvider', '$urlRouterProvider' ,function($stateProvider, $ur
             authenticate: false
         })
 
+        .state('customize',
+        {
+            parent:'home',
+            url: '/customize',
+            views: {
+                'home_content@home': {
+                    templateUrl: 'partials/pages/customize.html'
+                }
+            },
+            authenticate: false
+        })
 
         .state('pro_home',
         {
@@ -103,19 +114,19 @@ app.config(['$stateProvider', '$urlRouterProvider' ,function($stateProvider, $ur
                 }
             },
             authenticate: false
-        })
-
-        .state('image',
-        {
-            parent:'home',
-            url: '/image',
-            views: {
-                'home_content@home': {
-                    templateUrl: 'partials/pages/image.html'
-                }
-            },
-            authenticate: false
         });
+
+        //.state('image',
+        //{
+        //    parent:'home',
+        //    url: '/image',
+        //    views: {
+        //        'home_content@home': {
+        //            templateUrl: 'partials/pages/image.html'
+        //        }
+        //    },
+        //    authenticate: false
+        //});
 
     $urlRouterProvider.otherwise('/index');
 
