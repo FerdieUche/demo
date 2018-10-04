@@ -1,12 +1,12 @@
 
 'use strict';
-app.controller('loginController', function($scope,$rootScope,$state, $http, loginFactory, $location, $cookieStore) {
+app.controller('authController', function($scope,$rootScope,$state, $http, authFactory, $location, $cookieStore) {
 
     $scope.loginData = {};
     $scope.name = "User";
 
     $scope.signIn = function () {
-        loginFactory.login($scope.loginData)
+        authFactory.login($scope.loginData)
             .success(function (response) {
                 console.log(response);
                 $location.path('/');
@@ -46,21 +46,11 @@ app.controller('loginController', function($scope,$rootScope,$state, $http, logi
         }
     };
 
-    $scope.logout = function ()
-
-    {
-        console.log("Called logout");
-        $cookieStore.remove("user_auth");
-        window.location.href = "/";
-    };
-});
-
-app.controller('registerController', function($scope, $http, registerFactory, $location, $cookieStore) {
-
+    //Register function
     $scope.registerData = {};
 
     $scope.register = function () {
-        registerFactory.register($scope.registerData)
+        authFactory.register($scope.registerData)
             .success(function (response) {
                 console.log(response);
                 $location.path('/');
@@ -70,7 +60,7 @@ app.controller('registerController', function($scope, $http, registerFactory, $l
                 console.log(result);
                 swal("Good job!", "Registration successful!", "success");
                 // Sets the new href (URL) for the current window.
-                //window.location.href = "/";
+                window.location.href = "/";
             })
             .error(function (response) {
                 console.log(response);
@@ -80,15 +70,16 @@ app.controller('registerController', function($scope, $http, registerFactory, $l
             });
     };
 
-    // function to evaluate if user is authenticated
-    $scope.isAuth = function() {
-        if ($cookieStore.get("user_auth")){
-            return true;
-        }
-        else {
-            return false;
-        }
+
+    //Log out function
+    $scope.logout = function ()
+
+    {
+        console.log("Called logout");
+        $cookieStore.remove("user_auth");
+        //window.location.href = "/";
     };
+
 
 });
 

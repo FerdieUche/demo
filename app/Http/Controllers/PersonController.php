@@ -34,7 +34,7 @@ class PersonController extends Controller
         return Person::all();
     }
 
-    //find a particular employee by id
+    //find a particular person's profile by id
     public function show(Request $request, $id) {
         $person = Person::find($id);
         if(!$person) {

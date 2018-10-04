@@ -93,13 +93,13 @@
 
     <script src="<?= asset('app/angular/app.js') ?>"></script>
     <script src="<?= asset('app/angular/router/router.js') ?>"></script>
-    <script src="<?= asset('app/angular/controller/authController.js') ?>"></script>
+    <script src="<?= asset('app\angular\controller\authController.js') ?>"></script>
     <script src="<?= asset('app/angular/controller/script.js') ?>"></script>
-    <script src="<?= asset('app/angular/controller/profile.js') ?>"></script>
-    <script src="<?= asset('app/angular/factory/authFactory.js') ?>"></script>
-
-
-
+    <script src="<?= asset('app/angular/controller/profileController.js') ?>"></script>
+    <script src="<?= asset('app/angular/controller/gigsController.js') ?>"></script>
+    <script src="<?= asset('app\angular\factory\authFactory.js') ?>"></script>
+    <script src="<?= asset('app/angular/factory/profileFactory.js') ?>"></script>
+    <script src="<?= asset('app/angular/factory/gigsFactory.js') ?>"></script>
 </head>
 
 <body ng-app="app">

@@ -23,6 +23,10 @@ Route::get('person', 'PersonController@index')->name('person');
 
 Route::get('person/{id}', 'PersonController@show');
 
+Route::get('profession', 'ProfessionController@index')->name('person');
+
+Route::get('profession/{id}', 'ProfessionController@show');
+
 Auth::routes();
 
 
