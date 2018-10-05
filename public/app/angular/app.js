@@ -5,4 +5,4 @@ var app = angular.module('app', ['ui.router', 'ngCookies', 'ui.bootstrap'], func
 
 app.constant('API_URL', 'http://demo.io/api/');
 
-
+app.constant('Gig_plan', {"Premium": 3, "Standard": 2, "Basic": 1});

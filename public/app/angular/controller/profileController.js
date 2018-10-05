@@ -9,7 +9,7 @@ app.controller('ProfileController', function($state, $scope, $http, API_URL, $co
 
     //retrieve a particular person profile from DB
     $scope.id = {};
-    profileFactory.detail($stateParams.id)
+    profileFactory.FetchSinglePerson($stateParams.id)
         .success(function (response) {
             $scope.person = response;
             console.log(response);

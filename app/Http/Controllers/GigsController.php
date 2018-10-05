@@ -8,12 +8,12 @@ use App\Gigs;
 
 class GigsController extends Controller
 {
-    //Retrieve list of gigs
+    /**Retrieve list of gigs**/
     public function index() {
         return Gigs::all();
     }
 
-    //Retrieve a particular gig
+    /**Retrieve a particular gig**/
     public function show(Request $request, $id){
 
             $gig = Gigs::find($id);
@@ -24,7 +24,7 @@ class GigsController extends Controller
     }
 
 
-    //Update the record in the database
+    /**Update the record in the database**/
     public function update() {
         $gigs = Gigs::updateOrCreate(['user_id' => request('id')],[
             'gig_title' => request('gig_title'),

@@ -1,9 +1,12 @@
 /**
  * Created by MY PC on 10/4/2018.
  */
-app.controller('GigsController', function($state, $scope, $http, gigsFactory, $stateParams, $cookieStore) {
+app.controller('GigsController',[ '$state','$scope','$http','gigsFactory','$stateParams','$cookieStore','Gig_plan', function($state, $scope, $http, gigsFactory, $stateParams, $cookieStore, Gig_plan) {
+    /**GET Request Begins**/
+    $scope.gig_plan = gigsFactory.get_gig_plan();
 
-    //retrieve gigs listing from DB
+    $scope.gig = {};
+    /**retrieve gigs listing from DB**/
     $http.get('/Gigs')
         .success(function(response) {
             $scope.gigs = response;
@@ -18,22 +21,50 @@ app.controller('GigsController', function($state, $scope, $http, gigsFactory, $s
             });
     };
 
-    //Retrieve a particular gig's profile from DB
-    $scope.id = {};
-    gigsFactory.list($stateParams.id)
+
+    /**Retrieve a particular gig's profile from DB**/
+    gigsFactory.fetchSingleGig($stateParams.id)
         .success(function (response) {
-            $scope.gigs = response;
+            $scope.gig = response;
             console.log(response);
+
+    /**Calling the "update_Gig_plan" function from gigsFactory**/
+            gigsFactory.update_gig_plan(Gig_plan.Basic, $scope.gig);
+            gigsFactory.get_gig_plan($scope.gig_plan);
+
+            console.log(Gig_plan.Basic);
         })
         .error(function (response) {
             console.log(response);
         });
 
-    $scope.gig_plan_id = 1;
-    $scope.customize = function(){
-        console.log($scope.gig_plan_id)
+    /** Declare the function 'update_Gig_plan' **/
+    $scope.update_gig_plan = function (id)
+    {
+        gigsFactory.update_gig_plan(id, $scope.gig);
     };
+    /**GET Request Ends**/
 
+    /**Calculate the gig_plan.price Begins**/
+        $scope.a = $scope.gig_plan.price;
+        $scope.b = 50;
+        $scope.operation = '+';
+
+        $scope.calculate = function() {
+            if($scope.operation == '+') {
+                return $scope.na() + $scope.nb();
+            }
+            return "undef";
+        };
+    /**Calculate the gig_plan.price Ends**/
+
+
+
+
+
+
+
+    /**POST Request Begins**/
     $scope.gigsData = {};
     //save new record / update existing record for Gigs Prfile
     $scope.save = function () {
@@ -63,6 +94,7 @@ app.controller('GigsController', function($state, $scope, $http, gigsFactory, $s
             }
         );
     };
+    /**POST Request Ends**/
 
-});
+}]);
 

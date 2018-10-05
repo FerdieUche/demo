@@ -8,7 +8,7 @@ app.factory('profileFactory',['$http', 'API_URL', function($http, API_URL) {
         //GET Request Starts{...
 
         //Retrieve a particular Person's Profile
-        detail: function (id) {
+        FetchSinglePerson: function (id) {
             var person =$http.get('/person/' + id)
                 .success(function(response){
                     console.log(response);

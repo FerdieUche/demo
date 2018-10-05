@@ -19,11 +19,11 @@ Route::get('Gigs', 'GigsController@index')->name('Gigs');
 
 Route::get('Gig/{id}', 'GigsController@show');
 
-Route::get('person', 'PersonController@index')->name('person');
+Route::get('person', 'PersonController@index')->name('Person');
 
 Route::get('person/{id}', 'PersonController@show');
 
-Route::get('profession', 'ProfessionController@index')->name('person');
+Route::get('profession', 'ProfessionController@index')->name('Profession');
 
 Route::get('profession/{id}', 'ProfessionController@show');
 
