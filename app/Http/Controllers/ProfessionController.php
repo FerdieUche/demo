@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class ProfessionController extends Controller
 {
-    //return all professions data from the database
+    /**return all professions data from the database**/
     public function index() {
         return Profession::all();
     }
 
-    //find a particular profession's profile by id
+    /**find a particular profession's profile by id**/
     public function show(Request $request, $id) {
         $profession = Profession::find($id);
         if(!$profession) {
@@ -22,7 +22,7 @@ class ProfessionController extends Controller
 
 
 
-    //Update or save the record in the database
+    /**Update or save the record in the database**/
     public function update() {
         $profession = Profession::updateOrCreate(['user_id' => request('id')],[
         'occupation' => request('occupation'),
@@ -48,7 +48,7 @@ class ProfessionController extends Controller
 
     }
 
-    //public function to delete
+    /**public function to delete**/
     public function destroy(Request $request, $id) {
         $person = Profession::where('user_id',Auth::user()->id)
             ->delete();

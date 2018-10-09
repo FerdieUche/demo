@@ -88,253 +88,251 @@
                 </div>
             </div>
         </div>
-        <div ng-controller="ProfileController">
-            <div id="professional" class="tabcontent">
-                <h2>Professional Info</h2>
-                <p>This is your time to shine. Let potential buyers know what you do best </p>
-                <p> and how you gained your skills, certifications and experience. </p>
-                <p style="text-align: right"><i>*Mandatory fields</i></p>
-                <hr/>
-                <div class="form-group">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label class="control-label">Your Occupation*</label>
+        <div id="professional" class="tabcontent">
+            <h2>Professional Info</h2>
+            <p>This is your time to shine. Let potential buyers know what you do best </p>
+            <p> and how you gained your skills, certifications and experience. </p>
+            <p style="text-align: right"><i>*Mandatory fields</i></p>
+            <hr/>
+            <div class="form-group">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <label class="control-label">Your Occupation*</label>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <select class="form-control" name="occupation" value="[[occupation]]" ng-model="professionData.occupation" id="occupation">
+                                <option>Unknown</option>
+                                <option>Graphics & Design</option>
+                                <option>Music & Voiceover</option>
+                                <option>Videos & Animation</option>
+                                <option>Digital Marketing</option>
+                                <option>Writing & Translation</option>
+                                <option>Other</option>
+                            </select>
+
+
+                        </div>
                     </div>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control" name="occupation" value="[[occupation]]" ng-model="professionData.occupation" id="occupation">
+                </div>
+            </div>
+
+            <br/><br/><br/><br/>
+
+            <div class="form-group">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <label class="control-label">Availability*</label>
+                    <p><code><i>Private</i></code></p>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div class="container">
+                        <h4><b>Employment</b></h4>
+                        <script type="text/javascript">
+                            $(document).ready(function(){
+                                $("#selectPart_time").click(function () {
+
+                                    $('input:radio[name=employment]:nth(0)').attr('checked',true);
+                                    //$('input:radio[name=sex]')[0].checked = true;
+
+                                });
+
+                                $("#selectFull_time").click(function () {
+
+                                    $('input:radio[name=employment]:nth(1)').attr('checked',true);
+                                    //$('input:radio[name=sex]')[1].checked = true;
+
+                                });
+
+                                $("#selectUnknown").click(function () {
+
+                                    $('input:radio[name=employment]:nth(2)').attr('checked',true);
+                                    //$('input:radio[name=sex]')[2].checked = true;
+
+                                });
+
+                                $("#reset").click(function () {
+
+                                    $('input:radio[name=employment]').attr('checked',false);
+
+                                });
+
+                            });
+                        </script>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" name="employment" value="Part Time" id="Part_Time" ng-model="professionData.employment">Part Time</input>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" name="employment" value="Full Time" id="Full_Time" ng-model="professionData.employment">Full Time</input>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" name="employment" value="Unknown" id="Unknown" ng-model="professionData.employment">Unknown</input>
+                        </div>
+
+                        <h4><b>Monthly Income</b></h4>
+                        <!-- Group of default radios - option 1 -->
+                        <script type="text/javascript">
+                            $(document).ready(function(){
+                                $("#selectLess").click(function () {
+
+                                    $('input:radio[name=income]:nth(0)').attr('checked',true);
+                                    //$('input:radio[name=income]')[0].checked = true;
+
+                                });
+
+                                $("#selectBetween").click(function () {
+
+                                    $('input:radio[name=income]:nth(1)').attr('checked',true);
+                                    //$('input:radio[name=sex]')[1].checked = true;
+
+                                });
+
+                                $("#selectMore").click(function () {
+
+                                    $('input:radio[name=income]:nth(2)').attr('checked',true);
+                                    //$('input:radio[name=sex]')[2].checked = true;
+
+                                });
+
+                                $("#reset").click(function () {
+
+                                    $('input:radio[name=income]').attr('checked',false);
+
+                                });
+
+                            });
+                        </script>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" name="income" value="Less than $500 per month" ng-model="professionData.income" id="Less">Less than $500 per month</input>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" name="income" value="Between $500 and $1000 per month" ng-model="professionData.income" id="Between">Between $500 and $1000 per month</input>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" name="income" value="More than $1000 per month" ng-model="professionData.income" id="More">More than $1000 per month</input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br/><br/><br/><br/>
+
+            <div class="form-group">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <label class="control-label">Skills*</label>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <!--<div ngFor="skill in skills"></div>-->
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Skill</th>
+                            <th scope="col">Level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" name="skill" value="[[skill]]" ng-model="professionData.skill" placeholder="What's your skill" id="skill"></td>
+                            <td>
+                                <select class="form-control" name="skill_level" ng-model="professionData.skill_level" id="skill_level">
                                     <option>Unknown</option>
-                                    <option>Graphics & Design</option>
-                                    <option>Music & Voiceover</option>
-                                    <option>Videos & Animation</option>
-                                    <option>Digital Marketing</option>
-                                    <option>Writing & Translation</option>
-                                    <option>Other</option>
+                                    <option>Beginner</option>
+                                    <option>Intermediate</option>
                                 </select>
 
-
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <br/><br/><br/><br/>
+            <br/><br/><br/><br/>
 
-                <div class="form-group">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label class="control-label">Availability*</label>
-                        <p><code><i>Private</i></code></p>
-                    </div>
+            <div class="form-group">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <label class="control-label">Education</label>
+                </div>
+                <div class="container">
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <div class="container">
-                            <h4><b>Employment</b></h4>
-                            <script type="text/javascript">
-                                $(document).ready(function(){
-                                    $("#selectPart_time").click(function () {
-
-                                        $('input:radio[name=employment]:nth(0)').attr('checked',true);
-                                        //$('input:radio[name=sex]')[0].checked = true;
-
-                                    });
-
-                                    $("#selectFull_time").click(function () {
-
-                                        $('input:radio[name=employment]:nth(1)').attr('checked',true);
-                                        //$('input:radio[name=sex]')[1].checked = true;
-
-                                    });
-
-                                    $("#selectUnknown").click(function () {
-
-                                        $('input:radio[name=employment]:nth(2)').attr('checked',true);
-                                        //$('input:radio[name=sex]')[2].checked = true;
-
-                                    });
-
-                                    $("#reset").click(function () {
-
-                                        $('input:radio[name=employment]').attr('checked',false);
-
-                                    });
-
-                                });
-                            </script>
-
-                            <div class="custom-control custom-radio">
-                                <input type="radio" name="employment" value="Part Time" id="Part_Time" ng-model="professionData.employment">Part Time</input>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" name="sch_location" value="[[sch_location]]" ng-model="professionData.sch_location" placeholder="Country of School Location" id="country">
                             </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" name="employment" value="Full Time" id="Full_Time" ng-model="professionData.employment">Full Time</input>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" name="sch_name" value="[[sch_name]]" ng-model="professionData.sch_name" placeholder="College/University Name"  id="schname">
                             </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" name="employment" value="Unknown" id="Unknown" ng-model="professionData.employment">Unknown</input>
+                        </div>
+
+                        <br/>
+
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <select class="form-control" name="title" ng-model="professionData.title" id="title">
+                                    <option>Associate</option>
+                                    <option>B.A</option>
+                                    <option>B.Sc</option>
+                                    <option>M.A</option>
+                                    <option>M.B.A</option>
+                                    <option>M.Sc</option>
+                                    <option>M.D</option>
+                                    <option>Ph.D</option>
+                                    <option>B.Arch</option>
+                                    <option>BFA</option>
+                                    <option>MFA</option>
+                                    <option>LLB</option>
+                                    <option>LLM</option>
+                                </select>
                             </div>
-
-                            <h4><b>Monthly Income</b></h4>
-                            <!-- Group of default radios - option 1 -->
-                            <script type="text/javascript">
-                                $(document).ready(function(){
-                                    $("#selectLess").click(function () {
-
-                                        $('input:radio[name=income]:nth(0)').attr('checked',true);
-                                        //$('input:radio[name=income]')[0].checked = true;
-
-                                    });
-
-                                    $("#selectBetween").click(function () {
-
-                                        $('input:radio[name=income]:nth(1)').attr('checked',true);
-                                        //$('input:radio[name=sex]')[1].checked = true;
-
-                                    });
-
-                                    $("#selectMore").click(function () {
-
-                                        $('input:radio[name=income]:nth(2)').attr('checked',true);
-                                        //$('input:radio[name=sex]')[2].checked = true;
-
-                                    });
-
-                                    $("#reset").click(function () {
-
-                                        $('input:radio[name=income]').attr('checked',false);
-
-                                    });
-
-                                });
-                            </script>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" name="income" value="Less than $500 per month" ng-model="professionData.income" id="Less">Less than $500 per month</input>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" name="course_major" value="[[course_major]]"  ng-model="professionData.course_major" placeholder="Course Major"  id="major">
                             </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" name="income" value="Between $500 and $1000 per month" ng-model="professionData.income" id="Between">Between $500 and $1000 per month</input>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" name="income" value="More than $1000 per month" ng-model="professionData.income" id="More">More than $1000 per month</input>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <input type="year" placeholder="yyyy" class="form-control" name="sch_year" value="[[sch_year]]" ng-model="professionData.sch_year" id="year">
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <br/><br/><br/><br/>
+            <br/><br/>
 
-                <div class="form-group">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label class="control-label">Skills*</label>
-                    </div>
+            <div class="form-group">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <label class="control-label">Certification</label>
+                </div>
+                <div class="container">
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <!--<div ngFor="skill in skills"></div>-->
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <th scope="col">Skill</th>
-                                <th scope="col">Level</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><input type="text" class="form-control" name="skill" value="[[skill]]" ng-model="professionData.skill" placeholder="What's your skill" id="skill"></td>
-                                <td>
-                                    <select class="form-control" name="skill_level" ng-model="professionData.skill_level" id="skill_level">
-                                        <option>Unknown</option>
-                                        <option>Beginner</option>
-                                        <option>Intermediate</option>
-                                    </select>
-
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <br/><br/><br/><br/>
-
-                <div class="form-group">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label class="control-label">Education</label>
-                    </div>
-                    <div class="container">
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" name="sch_location" value="[[sch_location]]" ng-model="professionData.sch_location" placeholder="Country of School Location" id="country">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" name="sch_name" value="[[sch_name]]" ng-model="professionData.sch_name" placeholder="College/University Name"  id="schname">
-                                </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" name="cert" value="[[cert]]" ng-model="professionData.cert" placeholder="Certificate Of Award" id="cert">
                             </div>
-
-                            <br/>
-
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <select class="form-control" name="title" ng-model="professionData.title" id="title">
-                                        <option>Associate</option>
-                                        <option>B.A</option>
-                                        <option>B.Sc</option>
-                                        <option>M.A</option>
-                                        <option>M.B.A</option>
-                                        <option>M.Sc</option>
-                                        <option>M.D</option>
-                                        <option>Ph.D</option>
-                                        <option>B.Arch</option>
-                                        <option>BFA</option>
-                                        <option>MFA</option>
-                                        <option>LLB</option>
-                                        <option>LLM</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" name="course_major" value="[[course_major]]"  ng-model="professionData.course_major" placeholder="Course Major"  id="major">
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <input type="year" placeholder="yyyy" class="form-control" name="sch_year" value="[[sch_year]]" ng-model="professionData.sch_year" id="year">
-                                </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="year" placeholder="yyyy" class="form-control" value="[[cert_year]]" name="cert_year" ng-model="professionData.cert_year" id="date">
                             </div>
                         </div>
+                        <br/>
                     </div>
                 </div>
+            </div>
 
-                <br/><br/>
+            <br/><br/>
 
-                <div class="form-group">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label class="control-label">Certification</label>
-                    </div>
-                    <div class="container">
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" name="cert" value="[[cert]]" ng-model="professionData.cert" placeholder="Certificate Of Award" id="cert">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="year" placeholder="yyyy" class="form-control" value="[[cert_year]]" name="cert_year" ng-model="professionData.cert_year" id="date">
-                                </div>
-                            </div>
-                            <br/>
-                        </div>
-                    </div>
+            <div class="form-group">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <label class="control-label">Personal Web</label><br/>
+                    <code><i>Private</i></code>
                 </div>
-
-                <br/><br/>
-
-                <div class="form-group">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label class="control-label">Personal Web</label><br/>
-                        <code><i>Private</i></code>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <input type="text" class="form-control" name="web" value="[[web]]" ng-model="professionData.web" placeholder="Please provide your personal website URL" value="[[web]]" id="web">
-                    </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <input type="text" class="form-control" name="web" value="[[web]]" ng-model="professionData.web" placeholder="Please provide your personal website URL" value="[[web]]" id="web">
                 </div>
+            </div>
 
-                <br/><br/><br/><br/>
+            <br/><br/><br/><br/>
 
-                <div class="form-group" style="text-align: right">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button class="btn btn-default" style="color: red" ng-click="save()" onclick="openTab(event, 'linked')">Continue</button>
-                    </div>
+            <div class="form-group" style="text-align: right">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-default" style="color: red" ng-click="save()" onclick="openTab(event, 'linked')">Continue</button>
                 </div>
             </div>
         </div>

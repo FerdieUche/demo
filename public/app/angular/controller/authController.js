@@ -3,8 +3,9 @@
 app.controller('authController', function($scope,$rootScope,$state, $http, authFactory, $location, $cookieStore) {
 
     $scope.loginData = {};
-    $scope.name = "User";
+    $scope.registerData = {};
 
+    /**function to SignIn Authenticated User**/
     $scope.signIn = function () {
         authFactory.login($scope.loginData)
             .success(function (response) {
@@ -34,7 +35,7 @@ app.controller('authController', function($scope,$rootScope,$state, $http, authF
             });
     };
 
-    // function to evaluate if user is authenticated
+    /**function to evaluate if user is authenticated**/
     $scope.isAuth = function() {
         if ($cookieStore.get("user_auth")){
             //
@@ -46,9 +47,7 @@ app.controller('authController', function($scope,$rootScope,$state, $http, authF
         }
     };
 
-    //Register function
-    $scope.registerData = {};
-
+    /**function to Register New User**/
     $scope.register = function () {
         authFactory.register($scope.registerData)
             .success(function (response) {
@@ -60,7 +59,7 @@ app.controller('authController', function($scope,$rootScope,$state, $http, authF
                 console.log(result);
                 swal("Good job!", "Registration successful!", "success");
                 // Sets the new href (URL) for the current window.
-                window.location.href = "/";
+                window.location.href = "/index";
             })
             .error(function (response) {
                 console.log(response);
@@ -70,16 +69,13 @@ app.controller('authController', function($scope,$rootScope,$state, $http, authF
             });
     };
 
-
-    //Log out function
+    /**function to LogOut Authenticated User**/
     $scope.logout = function ()
-
     {
         console.log("Called logout");
         $cookieStore.remove("user_auth");
         //window.location.href = "/";
     };
-
 
 });
 

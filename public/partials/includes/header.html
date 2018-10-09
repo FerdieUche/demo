@@ -62,13 +62,7 @@
                                                                             <input type="password" name="password" ng-model="loginData.password" placeholder="Enter your Password" autocomplete="true">
                                                                         </div>
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <div class="col-sm-4" style="align-content: center">
-                                                                            <button type="button" name="save" class="close" data-dismiss="modal" ng-click="signIn()" style="text-align: center">Login</button>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!--<input type="submit" name="save" class="btn btn-primary" value="Login" ng-click="signIn()">-->
-
+                                                                    <input type="submit" name="save" class="btn btn-primary" value="Login" ng-click="signIn()">
                                                                 </form>
                                                             </div>
                                                             <!-- Modal footer -->
@@ -846,7 +840,6 @@
         $(".my_modal_join").click(function(){
             $("#myModalLogin").modal("hide");
             $("#myModalRegister").modal("show");
-
         })
         $(".tab_modal_login").click(function(){
             $("#myModalRegister").modal("hide");

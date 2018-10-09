@@ -2,7 +2,7 @@ app.factory('authFactory',['$http', 'API_URL', function($http, API_URL) {
 
     return {
 
-        //log in a new User
+        /**function to LogIn Authenticated User**/
         login: function (loginData) {
             var url = API_URL + 'signin';
             var authUser = $http({
@@ -20,7 +20,7 @@ app.factory('authFactory',['$http', 'API_URL', function($http, API_URL) {
             return authUser;
         },
 
-        //register a new User
+        /**function to Register New User**/
         register: function (registerData) {
             var url = API_URL + 'register';
             var newUser = $http({

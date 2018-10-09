@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Gigs;
-
 class GigsController extends Controller
 {
     /**Retrieve list of gigs**/
@@ -24,7 +22,7 @@ class GigsController extends Controller
     }
 
 
-    /**Update the record in the database**/
+    /**Update or save the record in the database**/
     public function update() {
         $gigs = Gigs::updateOrCreate(['user_id' => request('id')],[
             'gig_title' => request('gig_title'),

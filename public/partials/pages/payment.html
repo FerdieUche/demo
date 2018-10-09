@@ -6,19 +6,9 @@
                     <div class="row">
                         <div class="course-details-inner">
                             <div class="course-details-comments">
-                                <h3 class="sidebar-title">Customize Your Package</h3>
+                                <h3 class="sidebar-title">Payment options</h3>
                                 <div class="media">
-                                    <a href="#" class="pull-left">
-                                        <img alt="Comments" src="asset/img/course/41.jpg" class="media-object">
-                                    </a>
-                                    <div class="media-body">
-                                        <h5>
-                                            <b>[[gig_plan.name]]
-                                            </b>
-                                        </h5>
-                                        <h3><b>[[gig_plan.package_name]]</b></h3>
-                                        <p>[[gig_plan.package_description]]</p>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -29,26 +19,44 @@
                         <div class="sidebar-box-inner">
                             <div class="sidebar-course-reviews">
                                 <h5 class="sidebar-title"><b>Summary</b></h5>
-                                <div class="skill-area">
-                                    <div class="progress">
-                                        <div class="lead">Subtotal </div>
-                                        <div></div><span ng-model="a">$[[gig_plan.price]]</span>
+
+                                <div class="section-divider"></div>
+
+                                <div class="media">
+                                    <a href="#" class="pull-left">
+                                        <img alt="Comments" src="asset/img/course/41.jpg" class="media-object">
+                                    </a>
+                                    <div class="media-body">
+                                        <h5>
+                                            <b>[[gig_plan.name]]
+                                            </b>
+                                        </h5>
                                     </div>
+                                </div>
+
+                                <div class="section-divider"></div>
+
+                                
+
+                                <div class="section-divider"></div>
+
+                                <div class="skill-area">
                                     <div class="progress">
                                         <div class="lead">Service Fee</div>
                                         <div></div><span ng-model="b">$[[service_fee]]</span>
                                     </div>
-                                    <hr/>
+
+                                    <div class="section-divider"></div>
+
                                     <div class="progress">
                                         <div class="lead">Total</div>
                                         <div></div><span><b>$[[calculate(gig_plan.price, service_fee)]]</b></span>
                                     </div>
                                     <div class="progress">
                                         <div class="lead">Delivery Time</div>
-                                        <div></div><span>[[gig_plan.delivery_day]] Days</span>
+                                        <div></div><span>[[gig_plan.delivery_day]] days</span>
                                     </div>
-                                    <a href="#/payment" role="button" style="text-align: center" type="submit" class="default-full-width-btn">Order Now</a>
-                                    <p style="text-align: center">You won't be charged yet</p>
+                                    <button type="submit" class="default-full-width-btn">Continue</button>
                                 </div>
                             </div>
                         </div>

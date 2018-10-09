@@ -68,6 +68,7 @@ app.config(['$stateProvider', '$urlRouterProvider' ,function($stateProvider, $ur
             },
             authenticate: true
         })
+
         .state('manage_gig',
         {
             parent:'home',
@@ -104,6 +105,18 @@ app.config(['$stateProvider', '$urlRouterProvider' ,function($stateProvider, $ur
             authenticate: false
         })
 
+        .state('payment',
+        {
+            parent:'home',
+            url: '/payment',
+            views: {
+                'home_content@home': {
+                    templateUrl: 'partials/pages/payment.html'
+                }
+            },
+            authenticate: true
+        })
+
         .state('pro_home',
         {
             parent:'home',
@@ -115,18 +128,6 @@ app.config(['$stateProvider', '$urlRouterProvider' ,function($stateProvider, $ur
             },
             authenticate: false
         });
-
-        //.state('image',
-        //{
-        //    parent:'home',
-        //    url: '/image',
-        //    views: {
-        //        'home_content@home': {
-        //            templateUrl: 'partials/pages/image.html'
-        //        }
-        //    },
-        //    authenticate: false
-        //});
 
     $urlRouterProvider.otherwise('/index');
 
