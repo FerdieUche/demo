@@ -8,7 +8,14 @@
                             <div class="course-details-comments">
                                 <h3 class="sidebar-title">Payment options</h3>
                                 <div class="media">
+                                    <div class="pull-left">
+                                        <label class="checkbox_container">
+                                            <h4><b>Pay with Rave</b></h4>
+                                            <input type="radio" checked="checked" name="radio">
 
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +43,7 @@
 
                                 <div class="section-divider"></div>
 
-                                
+
 
                                 <div class="section-divider"></div>
 
@@ -56,7 +63,7 @@
                                         <div class="lead">Delivery Time</div>
                                         <div></div><span>[[gig_plan.delivery_day]] days</span>
                                     </div>
-                                    <button type="submit" class="default-full-width-btn">Continue</button>
+                                    <button type="submit" class="default-full-width-btn" onClick="payWithRave()">Pay Now</button>
                                 </div>
                             </div>
                         </div>

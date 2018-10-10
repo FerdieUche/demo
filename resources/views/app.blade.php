@@ -84,13 +84,13 @@
 
     <script src="<?= asset('app/angular/angular-cookies.js') ?>"></script>
 
-    <!-- Image Upload Script-->
+    <!-- Rave payment Script Starts-->
+    <script type="text/javascript" src="https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+    <script src="<?= asset('app\payment\raveInline.js') ?>"></script>
+    <!-- Rave payment Script Ends-->
 
-    <!-- AngularJS Application Scripts Ends-->
 
-
-    <!--Login & Register script for angular-->
-
+    <!-- AngularJS Application Scripts Starts-->
     <script src="<?= asset('app/angular/app.js') ?>"></script>
     <script src="<?= asset('app/angular/router/router.js') ?>"></script>
     <script src="<?= asset('app\angular\controller\authController.js') ?>"></script>
@@ -100,6 +100,8 @@
     <script src="<?= asset('app\angular\factory\authFactory.js') ?>"></script>
     <script src="<?= asset('app/angular/factory/profileFactory.js') ?>"></script>
     <script src="<?= asset('app/angular/factory/gigsFactory.js') ?>"></script>
+
+    <!-- AngularJS Application Scripts Ends-->
 </head>
 
 <body ng-app="app">
