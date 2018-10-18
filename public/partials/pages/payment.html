@@ -12,7 +12,6 @@
                                         <label class="checkbox_container">
                                             <h4><b>Pay with Rave</b></h4>
                                             <input type="radio" checked="checked" name="radio">
-
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -50,14 +49,14 @@
                                 <div class="skill-area">
                                     <div class="progress">
                                         <div class="lead">Service Fee</div>
-                                        <div></div><span ng-model="b">$[[service_fee]]</span>
+                                        <div></div><span ng-model="b">#[[service_fee]]</span>
                                     </div>
 
                                     <div class="section-divider"></div>
 
                                     <div class="progress">
                                         <div class="lead">Total</div>
-                                        <div></div><span><b>$[[calculate(gig_plan.price, service_fee)]]</b></span>
+                                        <div></div><span><b>#[[calculate(gig_plan.price, service_fee)]]</b></span>
                                     </div>
                                     <div class="progress">
                                         <div class="lead">Delivery Time</div>

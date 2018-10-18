@@ -1,5 +1,5 @@
 /**
- * Created by MY PC on 10/10/2018.
+ * Created by Ferdie on 10/10/2018.
  */
 const API_publicKey = "FLWPUBK-9157b60227530c0e0ee3a57adebc264a-X";
 
@@ -21,14 +21,17 @@ function payWithRave() {
             var txref = response.tx.txRef; // collect flwRef returned and pass to a server page to complete status check.
             console.log("This is the response returned after a charge", response);
             if (
-                response.tx.chargeResponseCode == "00" ||
-                response.tx.chargeResponseCode == "0"
-            ) {
+                response.tx.chargeResponseCode == "00" || response.tx.chargeResponseCode == "0"
+            )
+            {
                 // redirect to a success page
+                window.location = "#/index"+txref; //Add your success page here
+                swal("Great!", "Payment Successfully made!", "success");
             } else {
                 // redirect to a failure page.
+                window.location = "#/payment"+txref; //Add your success page here
+                swal("Unsuccessful!", "An error has occurred. Please check the card details for correction!", "error");
             }
-
             x.close(); // use this to close the modal immediately after payment.
         }
     });

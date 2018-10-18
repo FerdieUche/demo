@@ -1,18 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Gigs;
 class GigsController extends Controller
 {
     /**Retrieve list of gigs**/
-    public function index() {
+    public function FetchAllGigs() {
         return Gigs::all();
     }
 
     /**Retrieve a particular gig**/
-    public function show(Request $request, $id){
+    public function FetchSingleGig(Request $request, $id){
 
             $gig = Gigs::find($id);
         if(!$gig) {
@@ -21,9 +20,8 @@ class GigsController extends Controller
             return response($gig, 201);
     }
 
-
     /**Update or save the record in the database**/
-    public function update() {
+    public function UpdateSingleGig() {
         $gigs = Gigs::updateOrCreate(['user_id' => request('id')],[
             'gig_title' => request('gig_title'),
             'sub-category_id' => request('sub_category_id'),

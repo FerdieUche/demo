@@ -1,7 +1,6 @@
 /**
- * Created by MY PC on 8/7/2018.
+ * Created by Ferdie on 8/7/2018.
  */
-
 app.controller('ProfileController', function($state, $scope, $http, API_URL, $cookieStore, profileFactory, $stateParams){
 
     $scope.personData = {};
@@ -9,6 +8,7 @@ app.controller('ProfileController', function($state, $scope, $http, API_URL, $co
 
     //GET Request Starts{...
     /**Retrieve a Single Person's Profile from DB**/
+    function FetchSinglePerson(){
         profileFactory.FetchSinglePerson($stateParams.id)
             .success(function (response) {
                 $scope.person = response;
@@ -17,7 +17,10 @@ app.controller('ProfileController', function($state, $scope, $http, API_URL, $co
             .error(function (response) {
                 console.log(response);
             });
+
+    }
     /**Retrieve a Single Profession's Profile from DB**/
+    function FetchSingleProfession(){
         profileFactory.FetchSingleProfession($stateParams.id)
             .success(function (response) {
                 $scope.profession = response;
@@ -26,6 +29,10 @@ app.controller('ProfileController', function($state, $scope, $http, API_URL, $co
             .error(function (response) {
                 //console.log(response);
             });
+    }
+
+    FetchSinglePerson();
+    FetchSingleProfession();
     //...}GET Request Ends
 
 

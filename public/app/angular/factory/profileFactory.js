@@ -8,7 +8,7 @@ app.factory('profileFactory',['$http', 'API_URL', function($http, API_URL) {
         //GET Request Starts{...
         /**Retrieve a Single Person's Profile**/
             FetchSinglePerson: function (id) {
-                var person =$http.get('/person/' + id)
+                var person =$http.get('/FetchSinglePerson/' + id)
                     .success(function(response){
                         console.log(response);
                     })
@@ -20,7 +20,7 @@ app.factory('profileFactory',['$http', 'API_URL', function($http, API_URL) {
 
         /**Retrieve a Single Profession's Profile**/
             FetchSingleProfession: function (id) {
-                var profession =$http.get('/profession/' + id)
+                var profession =$http.get('/FetchSingleProfession/' + id)
                     .success(function(response){
                         //console.log(response);
                     })
@@ -35,7 +35,7 @@ app.factory('profileFactory',['$http', 'API_URL', function($http, API_URL) {
         //POST Request Starts{...
         /**Update Person's Profile**/
             SavePerson: function (personData) {
-                var url = API_URL + 'data';
+                var url = API_URL + 'UpdatePerson';
                 var authPerson = $http({
                     method: 'POST',
                     url: url,
@@ -53,7 +53,7 @@ app.factory('profileFactory',['$http', 'API_URL', function($http, API_URL) {
 
         /**Update Profession's Profile**/
             SaveProfession: function (professionData) {
-                var url = API_URL + 'info';
+                var url = API_URL + 'UpdateProfession';
                 var authProfession = $http({
                     method: 'POST',
                     url: url,

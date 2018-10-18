@@ -15,17 +15,19 @@ Route::get('/', function () {
     return view('app');
 });
 
-Route::get('Gigs', 'GigsController@index')->name('Gigs');
+Route::get('FetchAllGigs', 'GigsController@FetchAllGigs')->name('FetchAllGigs');
 
-Route::get('Gig/{id}', 'GigsController@show');
+Route::get('FetchSingleGig/{id}', 'GigsController@FetchSingleGig');
 
-Route::get('person', 'PersonController@index')->name('Person');
+Route::get('FetchTransactionCharges', 'PercentageChargeController@FetchTransactionCharges')->name('FetchTransactionCharges');
 
-Route::get('person/{id}', 'PersonController@show');
+Route::get('FetchAllPeople', 'PersonController@FetchAllPeople')->name('FetchAllPeople');
 
-Route::get('profession', 'ProfessionController@index')->name('Profession');
+Route::get('FetchSinglePerson/{id}', 'PersonController@FetchSinglePerson');
 
-Route::get('profession/{id}', 'ProfessionController@show');
+Route::get('FetchAllProfession', 'ProfessionController@FetchAllProfession')->name('FetchAllProfession');
+
+Route::get('FetchSingleProfession/{id}', 'ProfessionController@FetchSingleProfession');
 
 Auth::routes();
 

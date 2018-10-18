@@ -25,11 +25,11 @@ Route::post('register', 'AuthController@store')->name('register');
 Route::post('signin', 'AuthController@checkAuth')->name('signin');
 
 //PersonController...
-Route::post('data', 'PersonController@update')->name('data');
+Route::post('UpdatePerson', 'PersonController@UpdatePerson')->name('UpdatePerson');
 
 //GigsController...
-Route::post('update', 'GigsController@update')->name('update');
+Route::post('UpdateSingleGig', 'GigsController@UpdateSingleGig')->name('UpdateSingleGig');
 
 //ProfessionController...
-Route::post('info', 'ProfessionController@update')->name('info');
+Route::post('UpdateProfession', 'ProfessionController@UpdateProfession')->name('UpdateProfession');
 

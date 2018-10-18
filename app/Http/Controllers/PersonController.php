@@ -8,13 +8,13 @@ use App\Person;
 class PersonController extends Controller
 {
     /**return all persons data from the database**/
-    public function index() {
+    public function FetchAllPeople() {
         return Person::all();
     }
 
 
     /**find a particular person's profile by id**/
-    public function show(Request $request, $id) {
+    public function FetchSinglePerson(Request $request, $id) {
         $person = Person::find($id);
         if(!$person) {
             return response('Error in the log ' . $id, 403);
@@ -23,7 +23,7 @@ class PersonController extends Controller
 
 
     /**Update or save the record in the database**/
-    public function update() {
+    public function UpdatePerson() {
         $person = Person::updateOrCreate(['user_id' => request('id')],[
             'firstname' => request('firstname'),
             'surname' => request('surname'),

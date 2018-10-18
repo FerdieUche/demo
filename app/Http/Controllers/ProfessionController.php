@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Auth;
 class ProfessionController extends Controller
 {
     /**return all professions data from the database**/
-    public function index() {
+    public function FetchAllProfession() {
         return Profession::all();
     }
 
     /**find a particular profession's profile by id**/
-    public function show(Request $request, $id) {
+    public function FetchSingleProfession(Request $request, $id) {
         $profession = Profession::find($id);
         if(!$profession) {
             return response('Error in the log ' . $id, 403);
@@ -23,7 +23,7 @@ class ProfessionController extends Controller
 
 
     /**Update or save the record in the database**/
-    public function update() {
+    public function UpdateProfession() {
         $profession = Profession::updateOrCreate(['user_id' => request('id')],[
         'occupation' => request('occupation'),
             'employment' => request('employment'),

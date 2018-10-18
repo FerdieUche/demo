@@ -1,4 +1,6 @@
-
+/**
+ * Created by Ferdie on 24/6/2018.
+ */
 'use strict';
 app.controller('authController', function($scope,$rootScope,$state, $http, authFactory, $location, $cookieStore) {
 
@@ -22,9 +24,7 @@ app.controller('authController', function($scope,$rootScope,$state, $http, authF
                     $rootScope.redirectUrl = "";
                     console.log(url)
                     window.location.href = "#/" + url;
-                    //$state.go(url);
                 } else {
-                    //$state.go(url);
                     window.location.href = "/";
                 }
             })

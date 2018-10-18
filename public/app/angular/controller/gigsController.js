@@ -1,15 +1,18 @@
 /**
- * Created by MY PC on 10/4/2018.
+ * Created by Ferdie on 10/4/2018.
  */
 app.controller('GigsController',[ '$state','$scope','$http','gigsFactory','$stateParams','$cookieStore','Gig_plan', function($state, $scope, $http, gigsFactory, $stateParams, $cookieStore, Gig_plan) {
 
     $scope.gigsData = {};
     $scope.gig = {};
+    $scope.PercentageCharges = {};
+    console.log($scope.PercentageCharges);
     $scope.gig_plan = gigsFactory.get_gig_plan();
-    $scope.service_fee = 50;
+    $scope.service_fee = gigsFactory.CalculatePercentageCharge();
 
     //GET Request Starts{...
-        /**Retrieve all gig's profile from DB**/
+        /**Function to Retrieve all gig's profile from DB**/
+        function fetchAllGig(){
             gigsFactory.fetchAllGig($stateParams.id)
                 .success(function (response) {
                     $scope.gigs = response;
@@ -18,38 +21,57 @@ app.controller('GigsController',[ '$state','$scope','$http','gigsFactory','$stat
                 .error(function (response) {
                     console.log(response);
                 });
+        }
 
-        /**Retrieve a particular gig's profile from DB**/
+        /**Function to Retrieve a particular gig's profile from DB**/
+        function fetchSingleGig (){
             gigsFactory.fetchSingleGig($stateParams.id)
                 .success(function (response) {
                     $scope.gig = response;
                     console.log(response);
 
-            /**Calling the "update_Gig_plan" function from gigsFactory**/
+                    /**Calling the "update_Gig_plan" function from gigsFactory**/
                     gigsFactory.update_gig_plan(Gig_plan.Basic, $scope.gig);
                     gigsFactory.get_gig_plan($scope.gig_plan);
 
-                    console.log(Gig_plan.Basic);
+                    console.log(gigsFactory.get_gig_plan())
                 })
                 .error(function (response) {
                     console.log(response);
                 });
+        }
 
-        /** Declare the function 'update_Gig_plan' **/
+        /**Function to Retrieve all charges profile from DB**/
+        function fetchAllCharges(){
+            gigsFactory.fetchAllCharges()
+                .success(function (response) {
+                    $scope.PercentageCharges = response;
+                    console.log(response);
+                })
+                .error(function (response) {
+                    console.log(response);
+                });
+        }
+
+    /** Declare the function 'update_Gig_plan' **/
         $scope.update_gig_plan = function (id)
         {
             gigsFactory.update_gig_plan(id, $scope.gig);
+            $scope.service_fee = gigsFactory.CalculatePercentageCharge();
         };
-        /**Function to Calculate the gig_plan.price Begins**/
+
+    /**Function to Calculate the percentage charge Begins**/
+    function CalculatePercentageCharge(){
+            gigsFactory.CalculatePercentageCharge();
+        }
+
+    /**Function to Calculate the gig_plan.price Begins**/
         $scope.calculate = function(a, b) {
-            $scope.isLoading  = true;
             console.log(a + ' ' + b);
             var solution = parseInt(a) + parseInt(b);
-            //$timeout(function(){$scope.isLoading = false},2000);
             return solution;
-
         };
-    //GET Request Ends...}
+    //...}GET Request Ends
 
 
     //POST Request Starts{...
@@ -81,8 +103,13 @@ app.controller('GigsController',[ '$state','$scope','$http','gigsFactory','$stat
                     }
                 );
             };
-    //POST Request Ends...}
+    //...}POST Request Ends
 
+    //Call All functions
+    fetchAllCharges();
+    fetchSingleGig();
+    fetchAllGig();
+    CalculatePercentageCharge();
 
 }]);
 
